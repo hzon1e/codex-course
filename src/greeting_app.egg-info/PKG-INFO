@@ -1,0 +1,7 @@
+Metadata-Version: 2.4
+Name: greeting-app
+Version: 0.1.0
+Summary: A small project for learning software engineering with Codex.
+Requires-Python: >=3.11
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"

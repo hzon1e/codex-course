@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/greeting_app/__init__.py
+src/greeting_app/core.py
+src/greeting_app.egg-info/PKG-INFO
+src/greeting_app.egg-info/SOURCES.txt
+src/greeting_app.egg-info/dependency_links.txt
+src/greeting_app.egg-info/requires.txt
+src/greeting_app.egg-info/top_level.txt
+tests/test_core.py
