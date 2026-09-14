@@ -1,3 +1,5 @@
+import pytest
+
 from greeting_app.core import greet
 
 
@@ -17,3 +19,21 @@ def test_evening_greeting() -> None:
     result = greet("Kelvin", 20)
 
     assert result == "Good evening, Kelvin!"
+
+
+@pytest.mark.parametrize("hour", [-1, 24])
+def test_invalid_hour_raises_value_error(hour: int) -> None:
+    with pytest.raises(ValueError):
+        greet("Kelvin", hour)
+
+
+@pytest.mark.parametrize("hour", range(24))
+def test_valid_hours_return_expected_greeting(hour: int) -> None:
+    if hour < 12:
+        period = "Good morning"
+    elif hour < 18:
+        period = "Good afternoon"
+    else:
+        period = "Good evening"
+
+    assert greet("Kelvin", hour) == f"{period}, Kelvin!"
