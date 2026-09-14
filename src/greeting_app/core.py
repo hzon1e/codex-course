@@ -2,6 +2,9 @@ from datetime import datetime
 
 
 def greet(name: str, hour: int | None = None) -> str:
+    if name == "":
+        raise ValueError("name must not be empty")
+
     if hour is None:
         hour = datetime.now().hour
 

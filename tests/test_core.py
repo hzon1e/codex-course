@@ -21,6 +21,11 @@ def test_evening_greeting() -> None:
     assert result == "Good evening, Kelvin!"
 
 
+def test_empty_name_raises_value_error() -> None:
+    with pytest.raises(ValueError):
+        greet("", 8)
+
+
 @pytest.mark.parametrize("hour", [-1, 24])
 def test_invalid_hour_raises_value_error(hour: int) -> None:
     with pytest.raises(ValueError):
