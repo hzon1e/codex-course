@@ -40,6 +40,8 @@ Avoid unrelated refactoring.
 Before reporting a coding task as complete, run:
 
 pytest
+ruff check .
+mypy src
 
 # Definition of Done
 
@@ -48,5 +50,7 @@ A coding task is complete only when:
 - the requested behavior is implemented
 - relevant tests exist
 - all tests pass
+- Ruff passes
+- mypy passes
 - relevant documentation is updated
 - no unrelated files were changed
