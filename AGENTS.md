@@ -54,3 +54,11 @@ A coding task is complete only when:
 - mypy passes
 - relevant documentation is updated
 - no unrelated files were changed
+
+## Review workflow
+
+本專案提供 review-changes Skill，
+位於 .agents/skills/review-changes/SKILL.md。
+
+使用者明確啟用此 Skill 時，依其流程進行唯讀變更審查。
+審查與修復是不同任務；未獲批准前，不自行修復審查發現的問題。

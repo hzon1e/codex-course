@@ -1,0 +1,7 @@
+interface:
+  display_name: "變更審查"
+  short_description: "Review uncommitted changes without editing files."
+  default_prompt: "使用 $review-changes 審查目前尚未提交的修改。"
+
+policy:
+  allow_implicit_invocation: false
