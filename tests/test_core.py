@@ -42,3 +42,4 @@ def test_valid_hours_return_expected_greeting(hour: int) -> None:
         period = "Good evening"
 
     assert greet("Kelvin", hour) == f"{period}, Kelvin!"
+
