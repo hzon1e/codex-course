@@ -1,15 +1,16 @@
 from datetime import datetime
 
+from greeting_app.hour_validation import validate_hour
+from greeting_app.name_validation import validate_name
+
 
 def greet(name: str, hour: int | None = None) -> str:
-    if name == "":
-        raise ValueError("name must not be empty")
+    validate_name(name)
 
     if hour is None:
         hour = datetime.now().hour
 
-    if hour < 0 or hour > 23:
-        raise ValueError("hour must be between 0 and 23")
+    validate_hour(hour)
 
     if hour < 12:
         period = "Good morning"
